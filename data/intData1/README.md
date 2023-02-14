@@ -1,0 +1,1 @@
+- this int directory shows the most basic ways classes are defines, with basic data members and methods within the defined class
