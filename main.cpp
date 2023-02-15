@@ -1,9 +1,12 @@
 #include <iostream>
-#include "data/intData/data_int_obj.h"
+#include "data/intData1/data_int_obj.h"
+#include "data/intData2/data_int_obj_2.h"
 
 int main()
 {
     Int_obj test1;
+    Int_obj_2 test2;
+
     test1.set_uint_data(5);
     test1.show_uint_data();
     test1.set_sint_data(-5);
@@ -17,6 +20,11 @@ int main()
     test1.set_ssint_data(-20);
     test1.show_ssint_data();
 
+    test2.show_uint_data(10);
+    test2.show_sint_data(-10);
+    test2.show_ulint_data(15);
+    test2.show_slint_data(-15);
+    test2.show_usint_data(20);
 
     return 0;
 };//member function to display data
