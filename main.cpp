@@ -4,6 +4,7 @@
 #include "data/charData3/data_char_obj_1.h"
 #include "data/intData4/data_int_obj_2.h"
 #include "data/floatData5/data_flt_obj_2.h"
+#include "data/charData6/data_char_obj_2.h"
 
 using namespace std;
 
@@ -22,6 +23,9 @@ int main()
     Flt_obj_2 f0(2.4, 5.8);
     Flt_obj_2 f1(f0);
     Flt_obj_2 f2 = f0;
+
+    Chr_obj_2 cc1;
+    Chr_obj_2 cc2;
     
 
     cout << "class data" << endl;
@@ -72,7 +76,9 @@ int main()
     f2.show_f1();
     f2.show_f2();
 
-    
+    cc1.show_uc();
+    cc1.show_sc();
+    cc1.make_upper(cc2);
    
     
     return 0;
