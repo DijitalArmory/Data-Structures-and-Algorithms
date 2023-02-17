@@ -5,6 +5,9 @@
 #include "data/intData4/data_int_obj_2.h"
 #include "data/floatData5/data_flt_obj_2.h"
 #include "data/charData6/data_char_obj_2.h"
+#include "data/intData7/data_int_obj_3.h"
+#include "data/floatData8/data_flt_obj_3.h"
+#include "data/charData9/data_char_obj_3.h"
 
 using namespace std;
 
@@ -26,8 +29,26 @@ int main()
 
     Chr_obj_2 cc1;
     Chr_obj_2 cc2;
-    
 
+    Int_obj_3 i1;
+    Int_obj_3 i2(10);
+    Int_obj_3 i3(20, 30);
+
+
+    Flt_obj_3 f_obj_a;
+    Flt_obj_3 f_obj_b(f_obj_a);
+    Flt_obj_3 f_obj_c = f_obj_a;
+    Flt_obj_3 f_obj_d;
+    Flt_obj_3 f_obj_e;
+
+    Chr_obj_3 ch1; // defin two const objects
+    Chr_obj_3 ch2;
+
+    Chr_obj_3 ch3('R', 'E'); // define & initialize obj
+    const Chr_obj_3 ch4;
+    const Chr_obj_3 ch5('n', 'O');
+    
+/*  /////////////////////////////////////   */
     cout << "class data" << endl;
     test1.set_ui_data(5);
     test1.get_ui_data();
@@ -64,6 +85,7 @@ int main()
 
     c3.get_uc_data();
     c3.show_uc_data();
+
     c3.get_sc_data();
     c3.show_sc_data();
     c1.sum_up_ints(c2, c3);
@@ -76,10 +98,68 @@ int main()
     f2.show_f1();
     f2.show_f2();
 
+    cout << ":The default copies..." << endl;
     cc1.show_uc();
     cc1.show_sc();
     cc1.make_upper(cc2);
-   
+
+    cout << "initialized struct data" << endl;
+    i1.show_ui();
+    i1.show_si();
+
+    i2.show_ui();
+    i2.show_si();
+
+    i3.show_ui();
+    i3.show_si();
+
+    // 
+    f_obj_a.show_f1();
+    f_obj_a.show_f2();
+
+    f_obj_b.show_f1();
+    f_obj_b.show_f2();
+
+    f_obj_c.show_f1();
+    f_obj_c.show_f2();
+
+    f_obj_a.get_sum(f_obj_c);
+    f_obj_b.get_sum(f_obj_b);
+    f_obj_c.get_sum(f_obj_a);
+
+    cout << "shared static variable" << endl;
+    cout << f_obj_a.get_count() << endl;
+    cout << f_obj_b.get_count() << endl;
     
+    cout << "const data member functions" << endl;
+    
+    ch3.get_c1();
+    ch3.get_c2();
+    ch2.get_c1();
+    ch2.get_c2();
+    ch1.get_c1();
+    ch1.get_c2();
+    
+
+    ch1 = ch2.add_one(ch3);
+    ch1.show_data();
+
+    ch2=ch1.add_one(ch3);
+    ch1.show_data();
+    
+    /*
+    // throws a compiler err
+
+    ch4.get_c1();
+    ch4.get_c2();
+    
+    // error: passing ‘const Chr_obj_3’ as ‘this’ argument discards qualifiers
+    */
+
+    // ch4 = ch1.add_one(ch3); error=error: passing ‘const Chr_obj_3’ as ‘this’ argument discards qualifiers
+    ch4.show_data();
+
+    ch5.show_data();
+
     return 0;
 };
