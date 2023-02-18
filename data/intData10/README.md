@@ -1,4 +1,4 @@
 # 1
-- this data shows how to make and use OVERLOADED unary operators
-
--  Note: It is (almost) never a good/smart/wise idea to add a static variable within a struct in C++ because all members in a struct should be contiguous in memory, and a static variable is essentially global while other struct members are not neccessarily global
+- this data shows the basics of arrays and array elements.
+- notice how the array is initialized in the class constructors
+- notice the for loop in the 'show' method used in order to print out the individual number of array elements

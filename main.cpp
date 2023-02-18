@@ -8,6 +8,7 @@
 #include "data/intData7/data_int_obj_3.h"
 #include "data/floatData8/data_flt_obj_3.h"
 #include "data/charData9/data_char_obj_3.h"
+#include "data/intData10/data_int_obj_4.h"
 
 using namespace std;
 
@@ -48,6 +49,10 @@ int main()
     const Chr_obj_3 ch4;
     const Chr_obj_3 ch5('n', 'O');
     
+    Int_obj_4 i_obj_1;
+    Int_obj_4 i_obj_2;
+    Int_obj_4 i_obj_3(2, 4, 6,8);
+    Int_obj_4 i_obj_4;
 /*  /////////////////////////////////////   */
     cout << "class data" << endl;
     test1.set_ui_data(5);
@@ -158,8 +163,22 @@ int main()
 
     // ch4 = ch1.add_one(ch3); error=error: passing ‘const Chr_obj_3’ as ‘this’ argument discards qualifiers
     ch4.show_data();
-
     ch5.show_data();
+
+    cout << "array data" << endl;
+
+    i_obj_1.show_ui();
+    i_obj_1.show_ci();
+    i_obj_1.show_cni();
+    i_obj_1.show_sti();
+    //i_obj_1.show_arr();
+
+    i_obj_3.show_ui();
+    i_obj_3.show_ci();
+    i_obj_3.show_cni();
+    i_obj_3.show_sti();
+    //i_obj_3.show_arr();
+    
 
     return 0;
 };
