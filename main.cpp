@@ -9,6 +9,7 @@
 #include "data/floatData8/data_flt_obj_3.h"
 #include "data/charData9/data_char_obj_3.h"
 #include "data/intData10/data_int_obj_4.h"
+#include "data/floatData11/data_flt_obj_4.h"
 
 using namespace std;
 
@@ -51,8 +52,14 @@ int main()
     
     Int_obj_4 i_obj_1;
     Int_obj_4 i_obj_2;
-    Int_obj_4 i_obj_3(2, 4, 6,8);
+    Int_obj_4 i_obj_3(2, 4, 6, 8);
     Int_obj_4 i_obj_4;
+
+    Flt_obj_4 fobj1;
+    Flt_obj_4 fobj2;
+    Flt_obj_4 fobj3(3.0, 4.0, 5.0, 6.0, 7.0);
+    Flt_obj_4 fobj4;
+    Flt_obj_4 fobj5(4.3, 6.5, 8.2, 5.6, 2.2);
 /*  /////////////////////////////////////   */
     cout << "class data" << endl;
     test1.set_ui_data(5);
@@ -178,7 +185,14 @@ int main()
     i_obj_3.show_cni();
     i_obj_3.show_sti();
     //i_obj_3.show_arr();
-    
+
+    cout << "Matrix Data" << endl;
+    fobj1.show_data();
+    fobj1.show_arr_data();
+    fobj2.show_data();
+    fobj2.show_arr_data();
+    fobj3.show_data();
+    fobj3.show_arr_data();
 
     return 0;
 };
