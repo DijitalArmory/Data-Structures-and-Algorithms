@@ -10,6 +10,7 @@
 #include "data/charData9/data_char_obj_3.h"
 #include "data/intData10/data_int_obj_4.h"
 #include "data/floatData11/data_flt_obj_4.h"
+//#include "data/charData12/data_char_obj_4.h"
 
 using namespace std;
 
@@ -57,9 +58,11 @@ int main()
 
     Flt_obj_4 fobj1;
     Flt_obj_4 fobj2;
-    Flt_obj_4 fobj3(3.0, 4.0, 5.0, 6.0, 7.0);
-    Flt_obj_4 fobj4;
-    Flt_obj_4 fobj5(4.3, 6.5, 8.2, 5.6, 2.2);
+  
+    
+
+
+
 /*  /////////////////////////////////////   */
     cout << "class data" << endl;
     test1.set_ui_data(5);
@@ -165,7 +168,15 @@ int main()
     ch4.get_c1();
     ch4.get_c2();
     
-    // error: passing ‘const Chr_obj_3’ as ‘this’ argument discards qualifiers
+    // error: passing ‘const Chr_obj_3’
+    }
+
+    void show_d2_data(){
+        std::cout << inc_flt(d2.f1) << std::endl;
+        std::cout << inc_flt(d2.f2) << std::endl;
+    }
+
+}; as ‘this’ argument discards qualifiers
     */
 
     // ch4 = ch1.add_one(ch3); error=error: passing ‘const Chr_obj_3’ as ‘this’ argument discards qualifiers
@@ -186,13 +197,15 @@ int main()
     i_obj_3.show_sti();
     //i_obj_3.show_arr();
 
-    cout << "Matrix Data" << endl;
+    cout << "Unary Overloading" << endl;
     fobj1.show_data();
-    fobj1.show_arr_data();
     fobj2.show_data();
-    fobj2.show_arr_data();
-    fobj3.show_data();
-    fobj3.show_arr_data();
 
+    fobj1.show_inc_data();
+    fobj2.show_inc_data();
+
+    fobj1.show_data();
+    fobj2.show_data();
+    
     return 0;
 };
