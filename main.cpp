@@ -10,7 +10,7 @@
 #include "data/charData9/data_char_obj_3.h"
 #include "data/intData10/data_int_obj_4.h"
 #include "data/floatData11/data_flt_obj_4.h"
-//#include "data/charData12/data_char_obj_4.h"
+#include "data/charData12/data_char_obj_4.h"
 
 using namespace std;
 
@@ -59,7 +59,8 @@ int main()
     Flt_obj_4 fobj1;
     Flt_obj_4 fobj2;
   
-    
+    Chr_obj_4 cobj1;    
+    Chr_obj_4 cobj2('1', '2', '3', '4', '5', '6');
 
 
 
@@ -206,6 +207,10 @@ int main()
 
     fobj1.show_data();
     fobj2.show_data();
+
+    cout << "array of structs" << endl;
+    cobj1.show_all_s();
+    cobj2.show_all_s();
     
     return 0;
 };
