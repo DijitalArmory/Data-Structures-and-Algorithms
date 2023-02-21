@@ -12,6 +12,8 @@
 #include "data/floatData11/data_flt_obj_4.h"
 #include "data/charData12/data_char_obj_4.h"
 #include "data/intData13/data_int_obj_5.h"
+#include "data/floatData14/data_float_obj_5.h"
+#include "data/IntData15/data_int_obj_6.h"
 
 using namespace std;
 
@@ -67,6 +69,13 @@ int main()
     Int_obj_5 intobj2(4, 7);
     Int_obj_5 intobj3;
     Int_obj_5 intobj4;
+
+    Flt_obj_5 f_obj1;
+    Flt_obj_5 f_obj2(3.3, 4.4);
+    Flt_obj_5 f_obj3;
+    Flt_obj_5 f_obj4;
+
+    Int_obj_6 int_obj1;
 
 
 
@@ -225,6 +234,21 @@ int main()
     
     intobj3 = ++intobj2;
     intobj3.show_data();
+
+    cout << "nameless temporary objects (unary operator overloading)" << endl;
+    f_obj1.show_data();
+    f_obj2.show_data();
+    f_obj3.show_data();
+    f_obj4.show_data();
+
+    f_obj1 = ++f_obj3;
+    f_obj1.show_data();
+
+
+    int_obj1.show_data();
+    int_obj1.insert_elements(90);
+    int_obj1.display_elements();
+    
     
     return 0;
 };
