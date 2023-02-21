@@ -9,8 +9,22 @@ class Int_obj_6
 
     public:
 
-    // Putter
-    void set_element(int n, int element_value){     //set value of element{
+    // Setter
+    void set_element(int, int);
+
+    // Getter
+    int get_element(int) const;
+
+    // Insert Elements
+    void insert_elements(int);
+
+    // Display Elements
+    void display_elements();
+
+};
+
+// Setter
+void Int_obj_6::set_element(int n, int element_value){     //set value of element{
         if ( n < 0 || n >= LIMIT ){
             std::cout << "Index out of bounds" << std::endl; 
             exit(1); 
@@ -18,8 +32,8 @@ class Int_obj_6
         safe_arr[n] = element_value;
     }
 
-    // Getter
-    int get_element(int n) const {          //get value of element
+// Getter
+int Int_obj_6::get_element(int n) const {          //get value of element
         if ( n < 0 || n >= LIMIT ){
             std::cout << "Index out of bounds" << std::endl; 
             exit(1); 
@@ -28,23 +42,18 @@ class Int_obj_6
         return safe_arr[n];
     }
 
-    // Insert Elements
-    void insert_elements(int n){
+// Insert
+void Int_obj_6::insert_elements(int n){
         for(int j=0; j<LIMIT; j++){
             this->set_element(j, j*10);
         } 
             
     }
 
-    // display elements
-    void display_elements(){
+// Display
+void Int_obj_6::display_elements(){
         for(int j = 0; j < LIMIT ; j++){
             int temp = this->get_element(j);
             std::cout << "Element " << j << " is " << temp << std::endl;
         }
     }
-
-    void show_data(){std::cout << "temp" << std::endl;}
-};
-
-
