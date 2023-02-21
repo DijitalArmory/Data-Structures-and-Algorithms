@@ -10,3 +10,8 @@
 # 3
 - notice the assignment in the 'Insert' method...essentially, we place the function on the left side of the equal sign, and the value on the right side will
 be assigned to the variable returned by the function
+
+# 4
+* Subscript Operator Overloading *
+- from the book "Object Oriented C++"..
+- It’s perhaps slightly more convenient to use the same function for input and output of the safe array than it is to use separate functions there’s one less name to remember. But there’s an even better way, with no names to remember at all. I.E "Subscript Operator Overloading"
