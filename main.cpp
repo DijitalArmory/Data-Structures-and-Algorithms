@@ -13,7 +13,8 @@
 #include "data/charData12/data_char_obj_4.h"
 #include "data/intData13/data_int_obj_5.h"
 #include "data/floatData14/data_float_obj_5.h"
-#include "data/IntData15/data_int_obj_6.h"
+#include "data/intData15/data_int_obj_6.h"
+#include "data/floatData16/data_float_obj_6.h"
 
 using namespace std;
 
@@ -76,8 +77,9 @@ int main()
     Flt_obj_5 f_obj4;
 
     Int_obj_6 int_obj1;
+    Int_obj_6 int_obj2;
 
-
+    Flt_obj_6 fltobj_1;
 
 /*  /////////////////////////////////////   */
     cout << "class data" << endl;
@@ -244,11 +246,16 @@ int main()
     f_obj1 = ++f_obj3;
     f_obj1.show_data();
 
-
-    int_obj1.show_data();
-    int_obj1.insert_elements(90);
+    cout << "Subscript overloading precursor 1" << endl;
     int_obj1.display_elements();
+    int_obj2.insert_elements(1);
+    int_obj2.display_elements();
     
-    
+    /*
+    cout << "Subscript overloading precursor 2" << endl;
+    fltobj_1.insert_elements();
+    fltobj_1.display_elements();
+    */
+
     return 0;
 };
