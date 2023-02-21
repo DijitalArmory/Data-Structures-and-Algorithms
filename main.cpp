@@ -11,6 +11,7 @@
 #include "data/intData10/data_int_obj_4.h"
 #include "data/floatData11/data_flt_obj_4.h"
 #include "data/charData12/data_char_obj_4.h"
+#include "data/intData13/data_int_obj_5.h"
 
 using namespace std;
 
@@ -61,6 +62,11 @@ int main()
   
     Chr_obj_4 cobj1;    
     Chr_obj_4 cobj2('1', '2', '3', '4', '5', '6');
+
+    Int_obj_5 intobj1;
+    Int_obj_5 intobj2(4, 7);
+    Int_obj_5 intobj3;
+    Int_obj_5 intobj4;
 
 
 
@@ -211,6 +217,14 @@ int main()
     cout << "array of structs" << endl;
     cobj1.show_all_s();
     cobj2.show_all_s();
+
+    cout << "unary overloaded (w/return value)" << endl;
+    intobj1.show_data();
+    intobj2.show_data();
+
+    
+    intobj3 = ++intobj2;
+    intobj3.show_data();
     
     return 0;
 };
