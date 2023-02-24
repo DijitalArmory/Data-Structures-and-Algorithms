@@ -10,16 +10,18 @@ class DerivedClass : public BaseClass
 
     public:
     void push(int var){
+        std::cout << "derived method call ";
         if(top >= my_data - 1) {
-            std::cout << "Error: stack is full" << std::endl;
+            std::cout << "Error: stack is full";
             exit(1);
         }
         BaseClass::push(var);
     }
 
     int pop(){
+        std::cout << "derived method call ";
         if(top < 0){
-            std::cout << "Error - stack is empty!" << std::endl; 
+            std::cout << "Error - stack is empty!"; 
             exit(1); 
         }
         return BaseClass::pop();
