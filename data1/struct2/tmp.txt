@@ -1,0 +1,33 @@
+#include <iostream>
+
+struct Person {
+    std::string name;
+    int age;
+};
+
+class MyClass {
+public:
+    MyClass() : persons{{"Alice", 25}, {"Bob", 30}, {"Charlie", 35}} {}
+
+    void printPersons() {
+        for (auto person : persons) {
+            std::cout << person.name << " is " << person.age << " years old." << std::endl;
+        }
+    }
+
+private:
+    Person persons[3];
+    
+    void printPerson(const Person& person) {
+        std::cout << person.name << " is " << person.age << " years old." << std::endl;
+    }
+    
+public:
+    void printPersonAtIndex(int index) {
+        if (index < 0 || index >= sizeof(persons)/sizeof(persons[0])) {
+            std::cout << "Invalid index." << std::endl;
+        } else {
+            printPerson(persons[index]);
+        }
+    }
+};
