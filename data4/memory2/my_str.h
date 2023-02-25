@@ -1,0 +1,1 @@
+char const* str = "Idle hands are the devil’s workshop.";
